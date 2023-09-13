@@ -10,8 +10,19 @@
   "dependencies": {
     "ejs": "^3.1.9",
     "express": "^4.18.2",
-    "nodemon": "^3.0.1"
+    "msnodesqlv8": "^4.1.0",
+    "mssql": "^10.0.1",
+    "nodemon": "^3.0.1",
+    "sequelize": "^6.33.0"
   },
   "description": "Impacta software project",
-  "author": "Sheila Hilario"
+  "author": "Sheila Hilario",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/github.com/softwareProjectImpacta.git"
+  },
+  "bugs": {
+    "url": "https://github.com/github.com/softwareProjectImpacta/issues"
+  },
+  "homepage": "https://github.com/github.com/softwareProjectImpacta#readme"
 }
