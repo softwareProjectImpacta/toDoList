@@ -21,5 +21,3 @@ app.set('view engine', 'ejs');
 app.use(express.static(path.join(__dirname, 'shared')));
 app.use(routes)
 app.listen(port, () => console.log(`Servidor rodando na porta:${port}`));
-
-
