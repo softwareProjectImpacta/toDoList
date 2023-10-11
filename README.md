@@ -16,8 +16,8 @@
 
 1. Faça um clone desse repositório;
 2. Entre na pasta;
-3. No Terminal rode `yarn` para instalar as dependências;
-5. Rode `yarn start` para iniciar o metro;
+3. No Terminal rode `npm i` para instalar as dependências;
+5. Rode `npm start` para iniciar o metro;
 6. Acesse a porta http://localhost:3000/ para ver a página;
 
 ## ⚡️ Como contribuir
