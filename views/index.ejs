@@ -1,21 +1,26 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+  <!-- Apenas para desenvolvimento local -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' http://localhost:3000/;">
+  <!-- Apenas para desenvolvimento local -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header> Lista de Tarefas</header>
+  <h1>To Do List</h1>
 
-  <form action="">
-    <input type="text" name="task" id="task" placeholder="Insira uma tarefa">
-    <button id="addButton" type="submit">Adicionar</button> 
+
+  <form action="/tasks" method="post">
+      <label for="title">Title:</label>
+      <input type="text" id="title" name="title" required><br>
+
+      <label for="description">Description:</label>
+      <input type="text" id="description" name="description" required><br>
+
+      <input type="submit" value="AddTask">
   </form>
-
-  <li>
-    <a id="result"></a>
-  </li>
-  <script src="script.js"></script>
 </body>
 </html>
