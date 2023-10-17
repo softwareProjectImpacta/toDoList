@@ -1,7 +1,9 @@
 const express = require('express');
 const mssql = require('mssql');
+const mssql = require('mssql');
 const bodyParser = require('body-parser');
 const app = express();
+
 
 // Configuração do MSSQL
 const config = {

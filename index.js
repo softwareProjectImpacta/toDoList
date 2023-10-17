@@ -3,9 +3,16 @@ const path = require('path');
 const routes = require('./routes/routes');
 const mssql = require('./database/db');
 const bodyParser = require('body-parser');
+
 const app = express();
 const TaskController = require('./controller/TaskController');
+
 const port = 3000;
+TaskController.connectToDatabase();
+
+// Configuração do body-parser
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 TaskController.connectToDatabase();
 
 // Configuração do body-parser
