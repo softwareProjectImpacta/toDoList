@@ -1,5 +1,5 @@
 * {
-  margin: 0;
+  margin: 0.5rem;
   padding: 0;
   font-family: Roboto, Arial;
 }
@@ -11,13 +11,70 @@ body {
   color: #fff;
 }
 
-header {
-  background-color: rgb(126, 75, 167);
-  padding: 3rem;
-  margin: 0.5rem;
-  text-align: center;
+h1 {
+  background-color: #7e4ba7;
+  font-size: 3rem;
+  padding: 1rem;
+  text-align: justify;
+  width: 100%;
+}
+h3 {
+  background-color: #7e4ba9;
+  font-size: 2rem;
+  padding: 1rem;
+  text-align: justify;
+  width: 50%;
 }
 
-header h1 {
-  padding-bottom: 3rem;
+h2 {
+  color: #fff;
+  font-size: 1rem;
+  margin-top: 1rem;
+  padding-left: 1.5rem;
+}
+
+form {
+  margin: 1rem;
+  padding: 1rem;
+  margin-right: 2rem;
+  background-color: #333;
+  border-radius: 5px;
+}
+
+label {
+  color: #fff;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+input[type="text"] {
+  width: 60%;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  border: none;
+  border-radius: 3px;
+}
+
+input[type="submit"] {
+  background-color: #5bbb94;
+  color: #fff;
+  padding: 0.5rem;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+input[type="submit"]:hover {
+  background-color: #5bbb94;
+  padding: 0.5rem;
+  cursor: pointer;
+  border-radius: 3px;
+
+}
+
+li {
+  list-style: circle;
+  bottom:0.5rem ;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  margin-right: 2rem;
 }
