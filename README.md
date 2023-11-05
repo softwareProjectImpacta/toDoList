@@ -19,6 +19,7 @@
 3. No Terminal rode `npm i` para instalar as dependências;
 5. Rode `npm start` para iniciar o metro;
 6. Acesse a porta http://localhost:3000/ para ver a página;
+7. Você precisa ter o banco MySQL local em sua máquina, para rodar o projeto;
 
 ## ⚡️ Como contribuir
 
