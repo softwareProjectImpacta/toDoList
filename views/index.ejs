@@ -1,47 +1,45 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
-    <!-- Apenas para desenvolvimento local -->
     <meta
       http-equiv="Content-Security-Policy"
       content="default-src 'self' 'unsafe-inline' 'unsafe-eval' http://localhost:3000/;"
     />
-    <!-- Apenas para desenvolvimento local -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>Lista de Tarefas</header>
     <h1>To Do List</h1>
+    <h2>Add your tasks, so you don't forget ;)</h2>
 
     <form action="/tasks" method="post">
-      <label for="title">Título:</label>
+      <label for="title">To Do:</label>
       <input type="text" id="title" name="title" /><br />
-
-      <label for="user">Usuário:</label>
-      <input type="text" id="user" name="user" /><br />
-
-      <input type="submit" value="addTask" /><br /><br />
+      <label for="user">User Number:</label>
+      <input type="text"  name="user" /><br />
+      <input type="submit" value="Add" /><br /><br />
     </form>
-
-    <!-- Lista de tarefas -->
-    <ul>
-      <% tasks.forEach(task => { %>
-      <li>
-        <%= task.title %> - <%= task.user %>
-        <a href="/tasks/<%= task.id %>" data-id="<%= task.id %>">Excluir</a>
-      </li>
-      <% }); %>
-    </ul>
 
     <form action="/tasks/:taskId" method="post">
-      <label for="delete">Excluir tarefa</label><br />
-
-      <label for="description">ID da tarefa:</label>
+      <label for="delete">Delete</label><br />
+      <label for="id_tarefa">Task ID:</label>
       <input type="number" id="id_tarefa" name="id_tarefa" /><br />
-
-      <input type="submit" value="deleteTask" />
+      <input type="submit" value="Delete" />
     </form>
+
+    <!-- Adicione uma seção para listar as tarefas -->
+    <h3>Your List</h3>
+    <form action="/tasks" method="get" >
+    <div id="taskList" style="overflow: auto; max-height: 300px;">
+      <ul>
+        <% tasks.forEach(function(task) { %>
+          <li>
+            ID: <%= task.id_tarefa %>, Nome: <%= task.nm_tarefa %>
+          </li>
+        <% }); %>
+      </ul>
+    </div>
+  </form>
   </body>
 </html>

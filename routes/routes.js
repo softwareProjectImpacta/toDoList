@@ -1,18 +1,17 @@
 const routes = require("express").Router();
 const TaskController = require("../controller/TaskController");
 
-//routes.get("/home", TaskController.getAll)
+// routes.get("/home", TaskController.getAll)
 // Rota para buscar todas as tarefas
 routes.get("/tasks", async (req, res) => {
   try {
-    const { status } = req.body;
-    console.log(status);
     const tasks = await TaskController.listTasks();
-    res.json(tasks);
+    res.render('index.ejs', { tasks }); // Passa a variável tasks para a template EJS
   } catch (err) {
     res.status(500).json({ error: "Erro ao buscar tarefas" });
   }
 });
+
 
 // Rota para adicionar uma nova tarefa
 routes.post("/tasks", async (req, res) => {

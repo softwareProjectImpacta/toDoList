@@ -72,21 +72,9 @@ async function deleteTask(id_tarefa) {
   }
 }
 
-// Função para exibir as tarefas
-async function showTasks() {
-  try {
-    const tasks = await listTasks(); // Chama a função listTasks para buscar as tarefas do banco de dados
-    return tasks;
-  } catch (err) {
-    console.error("Erro ao exibir tarefas:", err);
-    throw err;
-  }
-}
-
 module.exports = {
   connectToDatabase,
   listTasks,
   addTask,
   deleteTask,
-  showTasks,
 };
