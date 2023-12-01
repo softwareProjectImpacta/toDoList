@@ -48,11 +48,11 @@ async function listTasks() {
 }
 
 // Função para adicionar uma nova tarefa
-async function addTask(nm_tarefa, id_usuario) {
+async function addTask(nm_tarefa, id_usuario, cd_status) {
   try {
     await mssql.connect(config);
     const result =
-      await mssql.query`INSERT INTO dbo.lista_tarefas (nm_tarefa, id_usuario) VALUES (${nm_tarefa}, ${id_usuario})`;
+      await mssql.query`INSERT INTO dbo.lista_tarefas (nm_tarefa, id_usuario, cd_status) VALUES (${nm_tarefa}, ${id_usuario}, ${cd_status})`;
     return result;
   } catch (err) {
     console.error("Erro ao adicionar tarefa:", err);
