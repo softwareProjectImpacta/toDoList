@@ -15,9 +15,9 @@ routes.get("/tasks", async (req, res) => {
 
 // Rota para adicionar uma nova tarefa
 routes.post("/tasks", async (req, res) => {
-  const { title, user } = req.body;
+  const { title, user, status } = req.body;
   try {
-    await TaskController.addTask(title, user);
+    await TaskController.addTask(title, user, status);
     res.status(201).json({ message: "Tarefa adicionada com sucesso!" });
   } catch (err) {
     res.status(500).json({ error: "Erro ao adicionar tarefa" });
